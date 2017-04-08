@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -eou pipefail
+
+run_make(){
+  make -f makefile || make
+}
+
