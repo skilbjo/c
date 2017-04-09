@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -eou pipefail
+
+gcc src/hello-world.c -S -o artifact/hello-world.s
