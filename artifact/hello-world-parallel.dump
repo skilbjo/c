@@ -1,0 +1,101 @@
+
+artifact/hello-world-parallel:	file format Mach-O 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+__text:
+100000e76:	55 	pushq	%rbp
+100000e77:	48 89 e5 	movq	%rsp, %rbp
+100000e7a:	48 83 ec 10 	subq	$16, %rsp
+100000e7e:	89 7d fc 	movl	%edi, -4(%rbp)
+100000e81:	48 89 75 f0 	movq	%rsi, -16(%rbp)
+100000e85:	b9 00 00 00 00 	movl	$0, %ecx
+100000e8a:	ba 00 00 00 00 	movl	$0, %edx
+100000e8f:	be 00 00 00 00 	movl	$0, %esi
+100000e94:	48 8d 3d 0c 00 00 00 	leaq	12(%rip), %rdi
+100000e9b:	e8 58 00 00 00 	callq	88
+100000ea0:	b8 00 00 00 00 	movl	$0, %eax
+100000ea5:	c9 	leave
+100000ea6:	c3 	retq
+100000ea7:	55 	pushq	%rbp
+100000ea8:	48 89 e5 	movq	%rsp, %rbp
+100000eab:	48 83 ec 20 	subq	$32, %rsp
+100000eaf:	48 89 7d e8 	movq	%rdi, -24(%rbp)
+100000eb3:	e8 4c 00 00 00 	callq	76
+100000eb8:	89 45 fc 	movl	%eax, -4(%rbp)
+100000ebb:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ebe:	89 c6 	movl	%eax, %esi
+100000ec0:	48 8d 3d 81 00 00 00 	leaq	129(%rip), %rdi
+100000ec7:	b8 00 00 00 00 	movl	$0, %eax
+100000ecc:	e8 39 00 00 00 	callq	57
+100000ed1:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ed4:	85 c0 	testl	%eax, %eax
+100000ed6:	75 1e 	jne	30 <_main._omp_fn.0+0x4F>
+100000ed8:	e8 21 00 00 00 	callq	33
+100000edd:	89 45 f8 	movl	%eax, -8(%rbp)
+100000ee0:	8b 45 f8 	movl	-8(%rbp), %eax
+100000ee3:	89 c6 	movl	%eax, %esi
+100000ee5:	48 8d 3d 73 00 00 00 	leaq	115(%rip), %rdi
+100000eec:	b8 00 00 00 00 	movl	$0, %eax
+100000ef1:	e8 14 00 00 00 	callq	20
+100000ef6:	c9 	leave
+100000ef7:	c3 	retq
+
+_main:
+100000e76:	55 	pushq	%rbp
+100000e77:	48 89 e5 	movq	%rsp, %rbp
+100000e7a:	48 83 ec 10 	subq	$16, %rsp
+100000e7e:	89 7d fc 	movl	%edi, -4(%rbp)
+100000e81:	48 89 75 f0 	movq	%rsi, -16(%rbp)
+100000e85:	b9 00 00 00 00 	movl	$0, %ecx
+100000e8a:	ba 00 00 00 00 	movl	$0, %edx
+100000e8f:	be 00 00 00 00 	movl	$0, %esi
+100000e94:	48 8d 3d 0c 00 00 00 	leaq	12(%rip), %rdi
+100000e9b:	e8 58 00 00 00 	callq	88
+100000ea0:	b8 00 00 00 00 	movl	$0, %eax
+100000ea5:	c9 	leave
+100000ea6:	c3 	retq
+
+_main._omp_fn.0:
+100000ea7:	55 	pushq	%rbp
+100000ea8:	48 89 e5 	movq	%rsp, %rbp
+100000eab:	48 83 ec 20 	subq	$32, %rsp
+100000eaf:	48 89 7d e8 	movq	%rdi, -24(%rbp)
+100000eb3:	e8 4c 00 00 00 	callq	76
+100000eb8:	89 45 fc 	movl	%eax, -4(%rbp)
+100000ebb:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ebe:	89 c6 	movl	%eax, %esi
+100000ec0:	48 8d 3d 81 00 00 00 	leaq	129(%rip), %rdi
+100000ec7:	b8 00 00 00 00 	movl	$0, %eax
+100000ecc:	e8 39 00 00 00 	callq	57
+100000ed1:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ed4:	85 c0 	testl	%eax, %eax
+100000ed6:	75 1e 	jne	30 <_main._omp_fn.0+0x4F>
+100000ed8:	e8 21 00 00 00 	callq	33
+100000edd:	89 45 f8 	movl	%eax, -8(%rbp)
+100000ee0:	8b 45 f8 	movl	-8(%rbp), %eax
+100000ee3:	89 c6 	movl	%eax, %esi
+100000ee5:	48 8d 3d 73 00 00 00 	leaq	115(%rip), %rdi
+100000eec:	b8 00 00 00 00 	movl	$0, %eax
+100000ef1:	e8 14 00 00 00 	callq	20
+100000ef6:	c9 	leave
+100000ef7:	c3 	retq
+Disassembly of section __TEXT,__stubs:
+__stubs:
+100000ef8:	ff 25 12 01 00 00 	jmpq	*274(%rip)
+100000efe:	ff 25 14 01 00 00 	jmpq	*276(%rip)
+100000f04:	ff 25 16 01 00 00 	jmpq	*278(%rip)
+100000f0a:	ff 25 18 01 00 00 	jmpq	*280(%rip)
+Disassembly of section __TEXT,__stub_helper:
+__stub_helper:
+100000f10:	4c 8d 1d f1 00 00 00 	leaq	241(%rip), %r11
+100000f17:	41 53 	pushq	%r11
+100000f19:	ff 25 e1 00 00 00 	jmpq	*225(%rip)
+100000f1f:	90 	nop
+100000f20:	68 00 00 00 00 	pushq	$0
+100000f25:	e9 e6 ff ff ff 	jmp	-26 <__stub_helper>
+100000f2a:	68 15 00 00 00 	pushq	$21
+100000f2f:	e9 dc ff ff ff 	jmp	-36 <__stub_helper>
+100000f34:	68 30 00 00 00 	pushq	$48
+100000f39:	e9 d2 ff ff ff 	jmp	-46 <__stub_helper>
+100000f3e:	68 4a 00 00 00 	pushq	$74
+100000f43:	e9 c8 ff ff ff 	jmp	-56 <__stub_helper>
