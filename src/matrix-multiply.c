@@ -63,7 +63,7 @@ void large_example() {
 }
 
 int main(int argc, char const *argv[]) {
-  /*small_example();*/
-  large_example();
+  small_example();
+  /*large_example();*/
   return 0;
 }
