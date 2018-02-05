@@ -17,6 +17,12 @@ matrix-multiply:
 	$(CC) $(CFLAGS) src/matrix-multiply.c -o artifact/matrix-multiply
 	artifact/matrix-multiply
 
+mess-around:
+	$(CC) $(CFLAGS) src/mess-around.c -o artifact/mess-around
+	$(CC) $(CFLAGS) -S src/mess-around.c -o artifact/mess-around.s
+	objdump -S --disassemble artifact/mess-around >artifact/mess-around.dump
+	artifact/mess-around
+
 clean:
 	rm -f artifact/*
 
